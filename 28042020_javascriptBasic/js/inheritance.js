@@ -1,8 +1,7 @@
+//Objects creates without any links
 let vasyaAnimal = {
     name: "Vasya"
 }
-
-//Objects creates without any links
 
 let vasyaCat = {
     color: "grey",
@@ -19,19 +18,35 @@ Animal.prototype.eat = function() {
 }
 
 function Cat(name, color) {
-    Animal.call(this, name)
+    let newCat = this;
+    Animal.call(newCat, name);
     this.color = color;
 }
 
-//Animal.prototype
-//the var was created via function constructor
-//let vasyaAnimalConstructed = new Animal("Vasya")
+Cat.prototype.mau = function () {
+    console.log(`Mau!!! Ich bin ${this.name}`)
+}
+Cat.prototype.__proto__ = Animal.prototype
+
+let anotherCat = new Cat("Petr", "black")
+
+//inheritance with classes
+class AnimalClass {
+    constructor(name) {
+        this.name = name;
+    }
+
+    eat() {
+        console.log("eating!!!!")
+    }
+}
 
 class CatClass extends AnimalClass {
     constructor(name, color) {
         super(name);
         this.color = color;
     }
+
     mau() {
         console.log(`Mau!!! Ich bin ${this.name}`)
     }

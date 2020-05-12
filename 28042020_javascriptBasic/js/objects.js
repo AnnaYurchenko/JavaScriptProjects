@@ -32,6 +32,7 @@ let vasya = new Cat("Vasya", "grey")
 
 class CatClass {
     name = "Vas";
+
     constructor(name, color) {
         this.name = name;
         this.color = color;
@@ -54,15 +55,16 @@ sayName() //function
 let human = {
     name: "Humanoid"
 }
-human.declare = sayName
+//human.declare = sayName
 
 let petyaHuman = {
     name: "Petya"
 }
+
 let objectWithoutName = {
-    name: "No name"
+    color: "black"
 }
 
-sayName.call(human) // vizov Object"name" with
-sayName.call(petyaHuman)
-sayName.call(objectWithoutName)
+sayName.call(human) //Humanoid
+sayName.call(petyaHuman)//Petya
+sayName.call(objectWithoutName)//undefined

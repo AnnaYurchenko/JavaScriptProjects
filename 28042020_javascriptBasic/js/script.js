@@ -1,11 +1,11 @@
-alert("Hello world");
-
 // let name = "Name" - creates the Object
 let name = "vasya" ; //variable
 const constName = "Petya";  //applying constants
 
 const arr = [2, 9, "-10", true]; //we cant change the type of object. array-> array
 arr[0] = -15 // but we can change the
+
+console.log(arr);
 
 // in JS functions are Objects too.All functions has prototypes
 function mau() {
@@ -34,13 +34,13 @@ for (let member of arr) {
 // vasyaCat.name = "Vasya"
 // vasyaCat.color = "grey"
 //
-// //creating the object "vasyaCat"
+//creating the object "vasyaCat"
 // let vasyaCat = {
 //     name: "Vasya",
 //     color: "grey"
 // }
-
-// // how to + the object to
+//
+//how to + the object to
 // vasyaCat.mau = function () {
 //     console.log("Mauu!!!")
 // };
@@ -49,7 +49,7 @@ for (let member of arr) {
 let petyaCat = {
     name: "Petya",
     color: "black",
-    mau: function () {
+    bau: function () {
         console.log("Mauu!!!")
     }
 }
@@ -58,9 +58,6 @@ let petyaCat = {
 let vasyaCat = {
     name: "Vasya",
     color: "grey",
-    mau: function () {
-        console.log("Mau!!! ich bin" + this.name); //this -> variables name need to take from the object we need.
-        //if we print just "name" -> any name from the project will be taken
     }
 }
 
